@@ -1,0 +1,109 @@
+.pages-berita{
+    box-sizing: border-box;
+    position: relative;
+    .section-header{
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        position: relative;
+        overflow: hidden;
+        .bg-overlay{
+            background-color: black;
+            opacity: 0.26;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        .container{
+            position: relative;
+            padding-top: 350px;
+            padding-bottom: 60px;
+            .pages-title{
+                z-index: 10;
+                margin-top: 206px;
+                color: white;
+                font-size: 43px;
+                font-weight: 700;
+                text-align: right;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .section-content{
+        .row{
+            .col-md-8{
+                padding-top: 60px;
+                padding-bottom: 40px;
+                .berita-wrapper{
+                    margin-bottom: 80px;
+                    .berita-image-wrapper{
+                        margin-bottom: 44px;
+                        overflow: hidden;
+                        a{
+                            img{
+                                transition: transform 300ms ease-out;
+                            }
+                            &:hover{
+                                img{
+                                    transition: transform 300ms ease-out;
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+                    }
+                    .berita-head{
+                        .berita-date{
+                            margin-right: 0px;
+                            margin-bottom: 5px;
+                            font-size: 13px;
+                            text-transform: none;
+                            letter-spacing: 0px;
+                            font-weight: 600;
+                            a{
+                                text-decoration: none;
+                                color: #959595;
+                            }
+                        }
+                        .berita-title{
+                            font-size: 37px;
+                            font-weight: 700;
+                            margin-bottom: 25px;
+                            letter-spacing: 1px;
+                            a{
+                                text-decoration: none;
+                                color: black;
+                                &:hover{
+                                    color: $primary
+                                }
+                            }
+                        }
+                    }
+                    .berita-content{
+                        .btn-berita-readmore{
+                            margin-top: 33px;
+                            padding: 15px 33px;
+                            background-color: #ffdd00;
+                            font-size: 15px;
+                            font-weight: 700;
+                            border: 0px;
+                            letter-spacing: 0;
+                            &:hover{
+                                background-color: black;
+                            }
+                        }
+                    }
+                }
+            }
+            .col-md-4{
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        }
+    }
+
+
+
+
+}

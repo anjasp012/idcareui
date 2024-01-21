@@ -1,0 +1,13 @@
+@import "colors";
+@import "../vendor/bootstrap/scss/bootstrap.scss";
+
+@import "global";
+@import "fonts";
+@import "icons";
+
+@import "pages/beranda";
+@import "pages/berita";
+@import "pages/kontak";
+
+@import "components/card";
+@import "components/breadcrumbs";

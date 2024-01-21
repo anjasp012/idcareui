@@ -1,0 +1,46 @@
+.pages-kontak{
+    box-sizing: border-box;
+    position: relative;
+    .section-header{
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        position: relative;
+        overflow: hidden;
+        .bg-overlay{
+            background-color: black;
+            opacity: 0.26;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        .container{
+            position: relative;
+            padding-top: 350px;
+            padding-bottom: 60px;
+            .pages-title{
+                z-index: 10;
+                margin-top: 206px;
+                color: white;
+                font-size: 43px;
+                font-weight: 700;
+                text-align: right;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .section-content{
+        .row{
+            .col-md-12{
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        }
+    }
+
+
+
+
+}

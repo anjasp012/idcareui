@@ -1,0 +1,18 @@
+.idcare-breadcrumbs{
+    padding-bottom: 25px;
+    padding-top: 25px;
+    font-size: 14px;
+    .idcare-breadcrumbs-item{
+        span{
+            margin-right: 15px;
+            color: #a0a0a0;
+            &.current-item{
+                color: #ffdd00;
+            }
+            a{
+                text-decoration: none;
+                color: #a0a0a0;
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-wrapper{
+    @include media-breakpoint-up(xl) {
+        position: absolute;
+    }
+    left: 0px;
+    right: 0px;
+    z-index: 3;
+    .topbar-idcare{
+        background-color: black;
+        color: white;
+        position: relative;
+        font-size: 13px;
+    }
+    .navbar-idcare{
+        padding-top: 32px;
+        padding-bottom: 32px;
+        @include media-breakpoint-down(xl) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: #000;
+        }
+        .navbar-brand{
+            max-width: 200px;
+            img{
+                width: 100%;
+                @include media-breakpoint-down(sm) {
+                    width: 90%;
+                }
+            }
+        }
+        .navbar-nav{
+            font-weight: 600;
+            .nav-item{
+                padding-left: 18px;
+                .nav-link{
+                    color: white;
+                    padding-bottom: 20px;
+                    padding-top: 20px;
+                    &:hover{
+                        color: $primary;
+                    }
+                    &.active{
+                        color: $primary;
+                    }
+                }
+                .dropdown-menu{
+                    top: auto;
+                    border-radius: 0px;
+                    background-color: black;
+                    li {
+                        .dropdown-item {
+                            &:hover{
+                                background-color: black !important;
+                                color: $primary;
+                            }
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    .idcare-footer-wrapper{
+        padding-top: 70px;
+        padding-bottom: 50px;
+        background-color: black;
+        color: white;
+    }
+    .idcare-copyright-wrapper{
+        background-color: #202020;
+        color: #838383;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 400;
+        font-size: 15px;
+    }
+}

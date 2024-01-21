@@ -1,0 +1,46 @@
+.pages-beranda{
+    box-sizing: border-box;
+    position: relative;
+    .section-header{
+        position: relative;
+        .slider-item{
+            @include media-breakpoint-down(sm) {
+                min-height: 291px;
+                object-fit: cover;
+                object-position: center;
+            }
+            @include media-breakpoint-down(md) {
+                min-height: 337px;
+                object-fit: cover;
+                object-position: center;
+            }
+            @include media-breakpoint-up(lg) {
+                height: 620px;
+                object-fit: cover;
+            }
+        }
+    }
+    .section-facility{
+        margin-top: -35px;
+        margin-bottom: 40px;
+    }
+    .section-content{
+        margin-top: 35px;
+        margin-bottom: 30px;
+        .title-section{
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0px;
+            text-transform: none;
+            color: #212052;
+        }
+        .border-section{
+            border-bottom: #ffdd00 3px solid;
+            margin-bottom: 35px;
+        }
+    }
+
+
+
+
+}
