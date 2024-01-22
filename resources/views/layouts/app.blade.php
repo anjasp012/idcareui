@@ -8,6 +8,9 @@
     <meta name="author" content="" />
 
     <title>@yield('title')</title>
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
     <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image/x-icon">
     <link href="{{ asset('idcare/style/main.css') }}" rel="stylesheet" />
     <link href="{{ asset('idcare/style/hamburgers.css') }}" rel="stylesheet">
