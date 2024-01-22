@@ -11,7 +11,8 @@
         <section class="section">
             <div class="section-header">
                 <div class="section-header-back">
-                    <a href="features-posts.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+                    <a href="{{ route('admin.pages.riset-laporan.index') }}" class="btn btn-icon"><i
+                            class="fas fa-arrow-left"></i></a>
                 </div>
                 <h1>Create New Riset</h1>
                 <div class="section-header-breadcrumb">
@@ -139,6 +140,4 @@
 
     <!-- Page Specific JS File -->
     <script src="{{ asset('stisla/dist/assets/js/page/features-post-create.js') }}"></script>
-
-
 @endpush
