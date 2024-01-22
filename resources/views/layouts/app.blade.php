@@ -120,7 +120,8 @@
             </div>
         </div>
     </footer>
-    <button id="toTopBtn" class="btn btn-primary d-block py-2" data-abc="true"><i class="bi bi-arrow-up"></i></button>
+    <button id="toTopBtn" class="btn btn-primary d-block py-2" data-abc="true" aria-label="toTop"><i
+            class="bi bi-arrow-up"></i></button>
 
     <!-- Bootstrap core JavaScript -->
     <script src="{{ asset('idcare/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
