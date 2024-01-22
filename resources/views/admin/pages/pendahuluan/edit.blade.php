@@ -31,7 +31,7 @@
                                     @csrf
                                     @method('PUT')
                                     <textarea class="editor form-control" id="body" name="content">{!! $data->content !!}</textarea>
-                                    <button class="btn btn-primary mt-3">Simpan</button>
+                                    <button class="btn btn-primary mt-3">Update</button>
                                 </form>
                             </div>
                         </div>
