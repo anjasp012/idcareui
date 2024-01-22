@@ -114,7 +114,7 @@ class GuestController extends Controller
     public function berita()
     {
         $data = [
-            'berita' => Post::where('category', 'news')->whereStatus('publish')->get(),
+            'berita' => Post::where('category', 'news')->whereStatus('publish')->paginate(10),
             'data' => Pages::findOrFail(11),
         ];
         return view('pages.berita', $data);
@@ -123,7 +123,7 @@ class GuestController extends Controller
     public function riset()
     {
         $data = [
-            'riset' => Risetlaporan::get(),
+            'riset' => Risetlaporan::paginate(10),
             'data' => Pages::findOrFail(12),
         ];
         return view('pages.riset', $data);
@@ -132,7 +132,7 @@ class GuestController extends Controller
     public function acara()
     {
         $data = [
-            'berita' => Post::where('category', 'articles')->whereStatus('publish')->get(),
+            'berita' => Post::where('category', 'articles')->whereStatus('publish')->paginate(10),
             'data' => Pages::findOrFail(14),
         ];
         return view('pages.acara', $data);
@@ -167,7 +167,7 @@ class GuestController extends Controller
     public function openCourseware()
     {
         $data = [
-            'berita' => Post::where('category', 'videos')->whereStatus('publish')->get(),
+            'berita' => Post::where('category', 'videos')->whereStatus('publish')->paginate(10),
             'data' => Pages::findOrFail(13),
         ];
         return view('pages.courseware', $data);
@@ -180,5 +180,23 @@ class GuestController extends Controller
             'data' => Post::whereSlug($slug)->first(),
         ];
         return view('pages.detail-course', $data);
+    }
+
+    public function class()
+    {
+        $data = [
+            'class' => Post::where('category', 'class')->whereStatus('publish')->paginate(10),
+            'data' => Pages::findOrFail(13),
+        ];
+        return view('pages.class', $data);
+    }
+
+    public function detailClass($slug)
+    {
+        $data = [
+            'title' => 'Class',
+            'data' => Post::whereSlug($slug)->first(),
+        ];
+        return view('pages.detail-class', $data);
     }
 }

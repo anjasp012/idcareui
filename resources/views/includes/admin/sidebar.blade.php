@@ -65,6 +65,9 @@
             <li class="{{ request()->routeIs('admin.klaster.index') ? 'active' : '' }}"><a class="nav-link"
                     href="{{ route('admin.klaster.index') }}"><i class="fas fa-pencil-ruler"></i>
                     <span>Klaster</span></a></li>
+            <li class="{{ request()->routeIs('admin.class.index') ? 'active' : '' }}"><a class="nav-link"
+                    href="{{ route('admin.class.index') }}"><i class="fas fa-pencil-ruler"></i>
+                    <span>Kelas</span></a></li>
         </ul>
     </aside>
 </div>

@@ -26,6 +26,8 @@ Route::get('/berita', [App\Http\Controllers\GuestController::class, 'berita'])->
 Route::get('/detail-berita/{slug}', [App\Http\Controllers\GuestController::class, 'detailBerita'])->name('detailBerita');
 Route::get('/report', [App\Http\Controllers\GuestController::class, 'acara'])->name('acara');
 Route::get('/detail-acara/{slug}', [App\Http\Controllers\GuestController::class, 'detailAcara'])->name('detailAcara');
+Route::get('/class', [App\Http\Controllers\GuestController::class, 'class'])->name('class');
+Route::get('/class/{slug}', [App\Http\Controllers\GuestController::class, 'detailClass'])->name('detailClass');
 Route::get('/klaster', [App\Http\Controllers\GuestController::class, 'klaster'])->name('klaster');
 Route::get('/camp', [App\Http\Controllers\GuestController::class, 'camp'])->name('camp');
 Route::get('/subjects', [App\Http\Controllers\GuestController::class, 'mataKuliah'])->name('mataKuliah');
@@ -43,6 +45,7 @@ Auth::routes();
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', App\Http\Controllers\Admin\DashboardController::class)->name('dashboard');
     Route::resource('klaster', App\Http\Controllers\Admin\KlasterController::class);
+    Route::resource('class', App\Http\Controllers\Admin\ClassController::class);
     Route::prefix('pages')->name('pages.')->group(function () {
         Route::resource('acara', App\Http\Controllers\Admin\Pages\AcaraController::class);
         Route::resource('berita', App\Http\Controllers\Admin\Pages\BeritaController::class);

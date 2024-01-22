@@ -48,7 +48,7 @@
                                     </h3>
                                 </div>
                                 <div class="berita-content">
-                                    {!! Str::limit($item->body, 200) !!}
+                                    {!! Str::limit(strip_tags($item->body), 200) !!}
 
 
                                     <div class="clear"></div>
@@ -57,8 +57,13 @@
                                         More</a>
                                 </div>
                             </div>
+                        @endforeach
+
+                        <div class="d-flex justify-content-end">
+                            {{ $berita->links('vendor.pagination.bootstrap-4') }}
+                        </div>
+
                     </div>
-                    @endforeach
                 </div>
                 <div class="col-md-4"></div>
             </div>

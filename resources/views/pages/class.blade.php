@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Reseacrh Paper Srchives | IdCARE.UI')
+@section('title', 'Class | IdCARE.UI')
 
 @section('content')
     <div class="pages-content pages-berita">
@@ -8,7 +8,7 @@
             style="background: url('{{ $data->bg_header != null ? 'storage/images/bg_page/' . $data->bg_header : asset('idcare/images/bg/berita.jpg') }}');">
             <div class="bg-overlay"></div>
             <div class="container">
-                <h1 class="pages-title">Riset/Laporan</h1>
+                <h1 class="pages-title">Class</h1>
             </div>
         </div>
         <div class="idcare-breadcrumbs">
@@ -22,7 +22,7 @@
                         &gt;
                     </span>
                     <span property="itemListElement" typeof="ListItem" class="current-item">
-                        Riset/Laporan
+                        Class
                     </span>
                 </div>
             </div>
@@ -31,23 +31,28 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        @foreach ($riset as $item)
+                        @foreach ($class as $item)
                             <div class="berita-wrapper">
+                                <div class="berita-image-wrapper">
+                                    <a href="{{ route('detailClass', $item->slug) }}">
+                                        <img src="{{ asset('storage/images/class/' . $item->thumbnail) }}" class="w-100"
+                                            alt="">
+                                    </a>
+                                </div>
                                 <div class="berita-head">
                                     <span class="berita-date">
                                         <a href="#">21/12/2023</a>
                                     </span>
                                     <h3 class="berita-title">
-                                        <a href="{{ route('detailRiset', $item->slug) }}">{{ $item->judul }}</a>
+                                        <a href="{{ route('detailClass', $item->slug) }}">{{ $item->title }}</a>
                                     </h3>
                                 </div>
                                 <div class="berita-content">
-                                    Detail Penulis {{ $item->penulis }} Judul {{ $item->judul }} Publikasi
-                                    {{ $item->publikasi }} Volume {{ $item->volume }} Halaman {{ $item->halaman }} Tahun
-                                    {{ $item->tahun }} Penerbit {{ $item->penerbit }}
+                                    {!! Str::limit($item->body, 200) !!}
+
 
                                     <div class="clear"></div>
-                                    <a href="{{ route('detailRiset', $item->slug) }}"
+                                    <a href="{{ route('detailClass', $item->slug) }}"
                                         class="btn btn-lg btn-dark rounded-0 btn-berita-readmore">Read
                                         More</a>
                                 </div>
@@ -55,7 +60,7 @@
                         @endforeach
 
                         <div class="d-flex justify-content-end">
-                            {{ $riset->links('vendor.pagination.bootstrap-4') }}
+                            {{ $class->links('vendor.pagination.bootstrap-4') }}
                         </div>
                     </div>
                 </div>

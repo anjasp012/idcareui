@@ -57,8 +57,12 @@
                                         More</a>
                                 </div>
                             </div>
+                        @endforeach
+
+                        <div class="d-flex justify-content-end">
+                            {{ $berita->links('vendor.pagination.bootstrap-4') }}
+                        </div>
                     </div>
-                    @endforeach
                 </div>
                 <div class="col-md-4"></div>
             </div>
