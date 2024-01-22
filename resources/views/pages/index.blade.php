@@ -46,11 +46,9 @@
                                     <img src="{{ asset('idcare/images/facility/1.jpg') }}" alt=""
                                         class="card-img-top rounded-0">
                                     <div class="card-body">
-                                        <div class="card-text">Sejak tanggal 20 Februari 2020 dengan dukungan Kerjasama
-                                            Universitas Indonesia dengan JICA berdasarkan Intergovernmental
-                                            Agreement antara Indonesia dan Jepang, di Fakultas Teknik
-                                            Universitas Indonesia, didirikan Indonesia Cyber Awareness and
-                                            Resilience Center, Universitas Indonesia (idCARE.UI).
+                                        <div class="card-text">
+                                            <div class="card-text">{!! Str::limit(strip_tags($sekilas->content), 345) !!}
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="card-footer bg-white">

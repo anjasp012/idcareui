@@ -14,6 +14,7 @@ class GuestController extends Controller
     {
         $data = [
             'berita' => Post::whereCategory('news')->take(4)->get(),
+            'sekilas' => Pages::findOrFail(16),
             'subject' => Pages::findOrFail(6),
             'camp' => Pages::findOrFail(9),
         ];
