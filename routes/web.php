@@ -51,6 +51,10 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
         Route::resource('berita', App\Http\Controllers\Admin\Pages\BeritaController::class);
         Route::resource('opencourseware', App\Http\Controllers\Admin\Pages\OpenCoursewareController::class);
         Route::resource('riset-laporan', App\Http\Controllers\Admin\Pages\RisetLaporanController::class);
+        Route::get('sekilas-idcare-ui', [App\Http\Controllers\Admin\Pages\SekilasIdCareUiController::class, 'index'])->name('sekilas-idcare-ui.index');
+        Route::get('sekilas-idcare-ui/edit', [App\Http\Controllers\Admin\Pages\SekilasIdCareUiController::class, 'edit'])->name('sekilas-idcare-ui.edit');
+        Route::put('sekilas-idcare-ui/update', [App\Http\Controllers\Admin\Pages\SekilasIdCareUiController::class, 'update'])->name('sekilas-idcare-ui.update');
+        Route::put('sekilas-idcare-ui/updateBg', [App\Http\Controllers\Admin\Pages\SekilasIdCareUiController::class, 'updateBg'])->name('sekilas-idcare-ui.updateBg');
         Route::get('pendahuluan', [App\Http\Controllers\Admin\Pages\PendahuluanController::class, 'index'])->name('pendahuluan.index');
         Route::get('pendahuluan/edit', [App\Http\Controllers\Admin\Pages\PendahuluanController::class, 'edit'])->name('pendahuluan.edit');
         Route::put('pendahuluan/update', [App\Http\Controllers\Admin\Pages\PendahuluanController::class, 'update'])->name('pendahuluan.update');

@@ -12,8 +12,9 @@
                 <a href="#" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Pages</li>
-            <li class=""><a class="nav-link" href=""><i class="fas fa-pencil-ruler"></i>
-                    <span>Beranda</span></a></li>
+            <li class=""><a class="nav-link" href="{{ route('admin.pages.sekilas-idcare-ui.index') }}"><i
+                        class="fas fa-pencil-ruler"></i>
+                    <span>Sekilas idCARE.UI</span></a></li>
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i>
                     <span>Profil</span></a>
