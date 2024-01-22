@@ -95,21 +95,5 @@
     <!-- Page Specific JS File -->
     <script src="{{ asset('stisla/dist/assets/js/page/features-post-create.js') }}"></script>
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-    <script>
-        var CSRFToken = '<?= csrf_token() ?>';
-        // console.log(CSRFToken);
-        var CKEditorOptions = {
-            filebrowserImageBrowseUrl: '/filemanager?type=Images',
-            filebrowserImageUploadUrl: '/filemanager/upload?type=Images&_token=',
-            filebrowserBrowseUrl: '/filemanager?type=Files',
-            filebrowserUploadUrl: '/filemanager/upload?type=Files&_token=' + CSRFToken
-        };
-        CKEDITOR.plugins.addExternal('justify', '/stisla/dist/assets/modules/ckeditor/plugins/justify/',
-            'plugin.js');
-
-        CKEDITOR.replace('body', {
-            CKEditorOptions,
-            extraPlugins: 'justify',
-        });
-    </script>
+    @include('push-script.admin')
 @endpush
