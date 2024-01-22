@@ -35,7 +35,7 @@
                             <div class="berita-wrapper">
                                 <div class="berita-head">
                                     <span class="berita-date">
-                                        <a href="#">21/12/2023</a>
+                                        <a href="#">{{ date('d/m/Y', strtotime($item->created_at)) }}</a>
                                     </span>
                                     <h3 class="berita-title">
                                         <a href="{{ route('detailOpenCourseware', $item->slug) }}">{{ $item->title }}</a>
