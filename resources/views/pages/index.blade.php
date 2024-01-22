@@ -143,10 +143,10 @@
                     <div class="col-md-4">
                         <h3 class="title-section">Video</h3>
                         <div class="border-section"></div>
-                        <div class="ratio ratio-16x9">
+                        {{-- <div class="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/E48WTSkJwKo?si=mzncZPzphOiK7BbP"
                                 title="YouTube video" allowfullscreen></iframe>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="col-md-8">
                         <h3 class="title-section">Berita & Update</h3>
