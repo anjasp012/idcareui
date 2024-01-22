@@ -132,10 +132,10 @@ class GuestController extends Controller
         ];
         SEOMeta::setTitle('mata kuliah');
         SEOMeta::setDescription(strip_tags('mata kuliah'));
-        SEOMeta::setCanonical(route('mata kuliah'));
+        SEOMeta::setCanonical(route('mataKuliah'));
         OpenGraph::setDescription(strip_tags('mata kuliah'));
         OpenGraph::setTitle('mata kuliah');
-        OpenGraph::setUrl(route('mata kuliah'));
+        OpenGraph::setUrl(route('mataKuliah'));
         TwitterCard::setTitle('mata kuliah');
         return view('pages.mata-kuliah', $data);
     }
