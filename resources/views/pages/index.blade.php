@@ -162,10 +162,10 @@
                                             <span class="berita-date fw-medium text-secondary">
                                                 {{ date('d/m/Y', strtotime($item->created_at)) }}
                                             </span>
-                                            <h5 class="berita-title">
+                                            <h3 class="berita-title">
                                                 <a class="text-decoration-none text-black"
                                                     href="{{ route('detailBerita', $item->slug) }}">{{ $item->title }}</a>
-                                            </h5>
+                                            </h3>
                                         </div>
                                     </div>
                                 </div>
