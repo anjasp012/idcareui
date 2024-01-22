@@ -29,7 +29,7 @@
                                 <h4>Write Riset</h4>
                             </div>
                             <div class="card-body">
-                                <form action="{{ route('admin.pages.' . strtolower($url) . '.update', $item) }}"
+                                <form action="{{ route('admin.pages.' . strtolower($url) . '.update', $data) }}"
                                     method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group row mb-4">
@@ -44,7 +44,8 @@
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">judul</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" name="judul" class="form-control">
+                                            <input type="text" name="judul" class="form-control"
+                                                value="{{ $data->judul }}">
                                             @error('judul')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
@@ -54,7 +55,8 @@
                                         <label
                                             class="col-form-label text-md-right col-12 col-md-3 col-lg-3">publikasi</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" name="publikasi" class="form-control">
+                                            <input type="text" name="publikasi" class="form-control"
+                                                value="{{ $data->publikasi }}">
                                             @error('publikasi')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
@@ -63,7 +65,8 @@
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">volume</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" name="volume" class="form-control">
+                                            <input type="text" name="volume" class="form-control"
+                                                value="{{ $data->volume }}">
                                             @error('volume')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
@@ -72,7 +75,8 @@
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">nomor</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" name="nomor" class="form-control">
+                                            <input type="text" name="nomor" class="form-control"
+                                                value="{{ $data->nomor }}">
                                             @error('nomor')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
@@ -81,7 +85,8 @@
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">halaman</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" name="halaman" class="form-control">
+                                            <input type="text" name="halaman" class="form-control"
+                                                value="{{ $data->halaman }}">
                                             @error('halaman')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
@@ -90,7 +95,8 @@
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">tahun</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" name="tahun" class="form-control">
+                                            <input type="text" name="tahun" class="form-control"
+                                                value="{{ $data->tahun }}">
                                             @error('tahun')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
@@ -100,7 +106,8 @@
                                         <label
                                             class="col-form-label text-md-right col-12 col-md-3 col-lg-3">penerbit</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" name="penerbit" class="form-control" value="">
+                                            <input type="text" name="penerbit" class="form-control"
+                                                value="{{ $data->penerbit }}">
                                             @error('penerbit')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
