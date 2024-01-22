@@ -23,13 +23,13 @@ class GuestController extends Controller
             'camp' => Pages::findOrFail(9),
         ];
         // dd($data);
-        SEOMeta::setTitle('Berita');
-        SEOMeta::setDescription(strip_tags('daftar berita'));
-        SEOMeta::setCanonical(route('berita'));
-        OpenGraph::setDescription(strip_tags('daftar berita'));
-        OpenGraph::setTitle('berita');
-        OpenGraph::setUrl(route('berita'));
-        TwitterCard::setTitle('berita');
+        SEOMeta::setTitle('beranda');
+        SEOMeta::setDescription(strip_tags('beranda'));
+        SEOMeta::setCanonical(route('beranda'));
+        OpenGraph::setDescription(strip_tags('beranda'));
+        OpenGraph::setTitle('beranda');
+        OpenGraph::setUrl(route('beranda'));
+        TwitterCard::setTitle('beranda');
         return view('pages.index', $data);
     }
 
