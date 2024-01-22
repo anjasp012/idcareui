@@ -50,8 +50,6 @@
     <!-- Page Specific JS File -->
     <script src="{{ asset('stisla/dist/assets/js/page/features-post-create.js') }}"></script>
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-    <script src="/stisla/dist/assets/modules/ckeditor/skins/office2013/skin.js"></script>
-    <script src="/stisla/dist/assets/modules/ckeditor/skins/office2013/editor.css"></script>
 
     <script>
         var CSRFToken = '<?= csrf_token() ?>';
@@ -62,7 +60,7 @@
             filebrowserBrowseUrl: '/filemanager?type=Files',
             filebrowserUploadUrl: '/filemanager/upload?type=Files&_token=' + CSRFToken,
             extraPlugins: 'justify,preview,simplebutton',
-            skin: 'office2013',
+            // skin: 'office2013',
         };
         // CKEDITOR.config.contentsCss = ['/stisla/dist/assets/modules/ckeditor/skins/office2013/editor.css'];
         CKEDITOR.plugins.addExternal('justify', '/stisla/dist/assets/modules/ckeditor/plugins/justify/',
