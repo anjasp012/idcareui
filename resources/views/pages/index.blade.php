@@ -135,7 +135,7 @@
         </div>
         <div class="section-content">
             <div class="container">
-                <div class="row">
+                <div class="row g-4">
                     <div class="col-md-4">
                         <h3 class="title-section">Video</h3>
                         <div class="border-section"></div>
