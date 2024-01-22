@@ -13,11 +13,11 @@
                 <div class="section-header-back">
                     <a href="features-posts.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
                 </div>
-                <h1>Edit Post</h1>
+                <h1>Create New Riset</h1>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
                     <div class="breadcrumb-item"><a href="#">Posts</a></div>
-                    <div class="breadcrumb-item">Edit Post</div>
+                    <div class="breadcrumb-item">Create New Post</div>
                 </div>
             </div>
 
@@ -26,70 +26,91 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Write Your Post</h4>
+                                <h4>Write Riset</h4>
                             </div>
                             <div class="card-body">
-                                <form action="{{ route('admin.pages.' . strtolower($url) . '.update', $data) }}"
+                                <form action="{{ route('admin.pages.' . strtolower($url) . '.update', $item) }}"
                                     method="POST" enctype="multipart/form-data">
-                                    @method('PUT')
                                     @csrf
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Title</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Penulis</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" name="title" class="form-control"
-                                                value="{{ $data->title }}">
-                                            @error('title')
+                                            <input type="text" name="penulis" class="form-control">
+                                            @error('penulis')
+                                                <small class="text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">judul</label>
+                                        <div class="col-sm-12 col-md-7">
+                                            <input type="text" name="judul" class="form-control">
+                                            @error('judul')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
                                         <label
-                                            class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Category</label>
+                                            class="col-form-label text-md-right col-12 col-md-3 col-lg-3">publikasi</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <select class="form-control selectric" name="category">
-                                                <option value="news">News</option>
-                                            </select>
-                                            @error('category')
+                                            <input type="text" name="publikasi" class="form-control">
+                                            @error('publikasi')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Content</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">volume</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <textarea class="summernote-simple" name="body">{{ $data->body }}</textarea>
-                                            @error('body')
+                                            <input type="text" name="volume" class="form-control">
+                                            @error('volume')
+                                                <small class="text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">nomor</label>
+                                        <div class="col-sm-12 col-md-7">
+                                            <input type="text" name="nomor" class="form-control">
+                                            @error('nomor')
+                                                <small class="text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">halaman</label>
+                                        <div class="col-sm-12 col-md-7">
+                                            <input type="text" name="halaman" class="form-control">
+                                            @error('halaman')
+                                                <small class="text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">tahun</label>
+                                        <div class="col-sm-12 col-md-7">
+                                            <input type="text" name="tahun" class="form-control">
+                                            @error('tahun')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
                                         <label
-                                            class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Thumbnail</label>
+                                            class="col-form-label text-md-right col-12 col-md-3 col-lg-3">penerbit</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <div id="image-preview" class="image-preview">
-                                                <label for="image-upload" id="image-label">Choose File</label>
-                                                <input type="file" name="thumbnail" id="image-upload" />
-                                            </div>
-                                            @error('thumbnail')
+                                            <input type="text" name="penerbit" class="form-control" value="">
+                                            @error('penerbit')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Status</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">File</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <select class="form-control selectric" name="status">
-                                                <option value="publish" {{ $data->status == 'publish' ? 'selected' : '' }}>
-                                                    Publish</option>
-                                                <option value="draft" {{ $data->status == 'draft' ? 'selected' : '' }}>
-                                                    Draft
-                                                </option>
-                                                <option value="pending" {{ $data->status == 'pending' ? 'selected' : '' }}>
-                                                    Pending</option>
-                                            </select>
-                                            @error('statu')
+                                            <input type="file" name="file" class="form-control">
+                                            @error('file')
                                                 <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
