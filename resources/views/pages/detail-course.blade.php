@@ -28,7 +28,7 @@
                         &gt;
                     </span>
                     <span property="itemListElement" typeof="ListItem">
-                        <a property="item" typeof="WebPage" title="Go to idCARE." href="{{ route('berita') }}"
+                        <a property="item" typeof="WebPage" title="Go to idCARE." href="{{ route('openCourseware') }}"
                             class="home">{{ $title }}</a>
                     </span>
                     <span>
