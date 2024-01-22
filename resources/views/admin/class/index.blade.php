@@ -59,10 +59,8 @@
                                                             method="POST">
                                                             @csrf
                                                             @method('DELETE')
-                                                            <a id="copyUrlButton"
-                                                                href="{{ route('detailClass', $item->slug) }}"
-                                                                class="btn btn-dark">Copy Url</a>
-
+                                                            <a data-url="{{ route('detailClass', $item->slug) }}"
+                                                                class="btn btn-dark copy-url-button">Copy Url</a>
                                                             <a href="{{ route('detailClass', $item->slug) }}"
                                                                 class="btn btn-info">View</a>
                                                             <a href="{{ route('admin.class.edit', $item) }}"
@@ -95,28 +93,37 @@
     <!-- Page Specific JS File -->
     <script src="{{ asset('stisla/dist/assets/js/page/modules-datatables.js') }}"></script>
     <script>
-        document.getElementById('copyUrlButton').addEventListener('click', function(event) {
-            event.preventDefault();
+        // Ambil semua elemen dengan kelas copy-url-button
+        var copyUrlButtons = document.querySelectorAll('.copy-url-button');
 
-            // Buat elemen input untuk menyimpan URL
-            var input = document.createElement('input');
-            input.value = this.href;
+        // Tambahkan event listener untuk setiap tombol
+        copyUrlButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
 
-            // Tempelkan elemen input ke dalam dokumen
-            document.body.appendChild(input);
+                // Dapatkan URL dari atribut data-url
+                var url = this.getAttribute('data-url');
 
-            // Pilih nilai dalam elemen input
-            input.select();
-            input.setSelectionRange(0, 99999); // Untuk mendukung perangkat seluler
+                // Buat elemen input untuk menyimpan URL
+                var input = document.createElement('input');
+                input.value = url;
 
-            // Salin URL ke clipboard
-            document.execCommand('copy');
+                // Tempelkan elemen input ke dalam dokumen
+                document.body.appendChild(input);
 
-            // Hapus elemen input setelah selesai
-            document.body.removeChild(input);
+                // Pilih nilai dalam elemen input
+                input.select();
+                input.setSelectionRange(0, 99999); // Untuk mendukung perangkat seluler
 
-            // Tampilkan pemberitahuan bahwa URL telah disalin
-            alert('URL berhasil disalin: ' + input.value);
+                // Salin URL ke clipboard
+                document.execCommand('copy');
+
+                // Hapus elemen input setelah selesai
+                document.body.removeChild(input);
+
+                // Tampilkan pemberitahuan bahwa URL telah disalin
+                alert('URL berhasil disalin: ' + input.value);
+            });
         });
     </script>
 @endpush
