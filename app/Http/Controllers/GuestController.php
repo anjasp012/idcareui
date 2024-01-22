@@ -24,9 +24,9 @@ class GuestController extends Controller
         ];
         // dd($data);
         SEOMeta::setTitle('beranda');
-        SEOMeta::setDescription(strip_tags('beranda'));
+        SEOMeta::setDescription(strip_tags('Sejak tanggal 20 Februari 2020 dengan dukungan Kerjasama Universitas Indonesia dengan JICA berdasarkan Intergovernmental Agreement antara Indonesia dan Jepang, di Fakultas Teknik Universitas Indonesia, didirikan Indonesia Cyber Awareness and Resilience Center, Universitas Indonesia (idCARE.UI).'));
         SEOMeta::setCanonical(route('beranda'));
-        OpenGraph::setDescription(strip_tags('beranda'));
+        OpenGraph::setDescription(strip_tags('Sejak tanggal 20 Februari 2020 dengan dukungan Kerjasama Universitas Indonesia dengan JICA berdasarkan Intergovernmental Agreement antara Indonesia dan Jepang, di Fakultas Teknik Universitas Indonesia, didirikan Indonesia Cyber Awareness and Resilience Center, Universitas Indonesia (idCARE.UI).'));
         OpenGraph::setTitle('beranda');
         OpenGraph::setUrl(route('beranda'));
         TwitterCard::setTitle('beranda');
