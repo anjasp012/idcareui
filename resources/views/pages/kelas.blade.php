@@ -46,5 +46,6 @@
     <script>
         $('.ckeditor table').addClass('table table-bordered table-striped');
         $('.ckeditor table a').addClass('text-black fw-bold');
+        $('.ckeditor a:contains("Konsultasi Whatsapp Sekarang")').addClass('btn btn-primary');
     </script>
 @endpush
