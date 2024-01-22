@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="idcare-breadcrumbs-item">
                     <span property="itemListElement" typeof="ListItem">
-                        <a property="item" typeof="WebPage" title="Go to idCARE." href="/index.html"
+                        <a property="item" typeof="WebPage" title="Go to idCARE." href="{{ route('beranda') }}"
                             class="home">idCARE</a>
                     </span>
                     <span>
