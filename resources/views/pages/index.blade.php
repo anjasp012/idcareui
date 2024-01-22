@@ -12,12 +12,12 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="{{ asset('idcare/images/slide/Slide_01.jpg') }}" alt="idCARE.UI slide 1"
+                        <img src="{{ asset('idcare/images/slide/Slide_01.jpg') }}" loading="lazy" alt="idCARE.UI slide 1"
                             class="slider-item w-100" />
                         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('idcare/images/slide/Slide_02.jpg') }}" alt="idCARE.UI slide 2"
+                        <img src="{{ asset('idcare/images/slide/Slide_02.jpg') }}" loading="lazy" alt="idCARE.UI slide 2"
                             class="slider-item w-100" />
                         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
