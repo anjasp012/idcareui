@@ -40,7 +40,7 @@
             <div class="container">
                 <div class="row g-5">
                     <div class="col-md-4" style="border-right: 1px #363636 solid;">
-                        <img src="{{ asset('idcare/images/logo-footer.png') }}" class="w-100" alt="">
+                        <img src="{{ asset('idcare/images/logo-footer.png') }}" class="w-100" alt="idCARE.UI">
                     </div>
                     <div class="col-md-4" style="border-right: 1px #363636 solid;">
                         <p>
@@ -55,7 +55,7 @@
                                     href="https://wa.me/082122112882">
                                     <div class="d-flex gap-2">
                                         <img width="25px" src="{{ asset('idcare/images/icons/whatsapp.png') }}"
-                                            alt="">
+                                            alt="idCARE.UI">
                                         0821-2211-2882 (Office)
                                     </div>
                                 </a>
@@ -63,42 +63,42 @@
                             <li class="mt-1"><a class="text-decoration-none text-white">
                                     <div class="d-flex gap-2">
                                         <img width="25px" src="{{ asset('idcare/images/icons/instagram.png') }}"
-                                            alt="">
+                                            alt="idCARE.UI">
                                         idcare.ui
                                     </div>
                                 </a></li>
                             <li class="mt-1"><a class="text-decoration-none text-white">
                                     <div class="d-flex gap-2">
                                         <img width="25px" src="{{ asset('idcare/images/icons/linkedin.png') }}"
-                                            alt="">
+                                            alt="idCARE.UI">
                                         idcare.ui
                                     </div>
                                 </a></li>
                             <li class="mt-1"><a class="text-decoration-none text-white">
                                     <div class="d-flex gap-2">
                                         <img width="25px" src="{{ asset('idcare/images/icons/facebook.png') }}"
-                                            alt="">
+                                            alt="idCARE.UI">
                                         idcare.ui
                                     </div>
                                 </a></li>
                             <li class="mt-1"><a class="text-decoration-none text-white">
                                     <div class="d-flex gap-2">
                                         <img width="25px" src="{{ asset('idcare/images/icons/mail.png') }}"
-                                            alt="">
+                                            alt="idCARE.UI">
                                         idcare.ui
                                     </div>
                                 </a></li>
                             <li class="mt-1"><a class="text-decoration-none text-white" href="{{ route('kelas') }}">
                                     <div class="d-flex gap-2">
                                         <img width="25px" src="{{ asset('idcare/images/icons/www.png') }}"
-                                            alt="">
+                                            alt="idCARE.UI">
                                         {{ route('kelas') }}
                                     </div>
                                 </a></li>
                             <li class="mt-1"><a class="text-decoration-none text-white">
                                     <div class="d-flex gap-2">
                                         <img width="25px" height="25px"
-                                            src="{{ asset('idcare/images/icons/placeholder.png') }}" alt="">
+                                            src="{{ asset('idcare/images/icons/placeholder.png') }}" alt="idCARE.UI">
                                         idCARE.UI,
                                         Fakultas Teknik, Universitas Indonesia
                                         Kampus Baru UI Depok 16424

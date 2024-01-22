@@ -36,7 +36,7 @@
                                 <div class="berita-image-wrapper">
                                     <a href="{{ route('detailAcara', $item->slug) }}">
                                         <img src="{{ asset('storage/images/acara/' . $item->thumbnail) }}" class="w-100"
-                                            alt="">
+                                            alt="idCARE.UI">
                                     </a>
                                 </div>
                                 <div class="berita-head">

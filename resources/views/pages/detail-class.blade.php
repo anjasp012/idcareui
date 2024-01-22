@@ -46,7 +46,7 @@
                     <div class="col-md-8">
                         <div class="mb-4">
                             <img src="{{ asset('storage/images/class/' . $data->thumbnail) }}" class="w-100"
-                                alt="">
+                                alt="idCARE.UI">
                         </div>
                         <div class="ckeditor">
                             {!! $data->body !!}

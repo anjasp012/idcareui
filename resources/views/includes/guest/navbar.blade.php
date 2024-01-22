@@ -13,7 +13,7 @@
     <nav id="navbar" class="navbar navbar-nonscrolled navbar-idcare navbar-dark navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="{{ asset('idcare/images/logo.png') }}" class="w-100" alt="">
+                <img src="{{ asset('idcare/images/logo.png') }}" class="w-100" alt="idCARE.UI">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,7 +88,7 @@
         <nav class="navbar navbar-scrolled navbar-idcare navbar-dark navbar-expand-lg d-none">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="{{ asset('idcare/images/logo.png') }}" class="w-100" alt="">
+                    <img src="{{ asset('idcare/images/logo.png') }}" class="w-100" alt="idCARE.UI">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"

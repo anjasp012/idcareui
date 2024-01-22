@@ -40,7 +40,7 @@
                             <div class="row g-5 mb-5">
                                 <div class="col-md-3">
                                     <img src="{{ asset('storage/images/klaster/' . $item->photo) }}" class="w-100 shadow"
-                                        alt="">
+                                        alt="idCARE.UI">
                                 </div>
                                 <div class="col-md-9">
                                     <h2><strong>{{ $item->name }}</strong></h2>

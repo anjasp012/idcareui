@@ -35,7 +35,7 @@
                             <div class="card-body">
                                 <img class="w-100"
                                     src="{{ $data->bg_header != null ? asset('storage/images/bg_page/' . $data->bg_header) : asset('idcare/images/bg/berita.jpg') }}"
-                                    alt="">
+                                    alt="idCARE.UI">
                             </div>
                         </div>
                     </div>

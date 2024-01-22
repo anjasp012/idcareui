@@ -30,7 +30,7 @@
                                     <div class="card-header" style="background-color: #ffdd00;">
                                         <div class="d-flex gap-4 align-items-center">
                                             <img src="{{ asset('idcare/images/card-logo-1.png') }}" height="60"
-                                                width="60" alt="">
+                                                width="60" alt="idCARE.UI">
                                             <div>
                                                 <div class="card-header-title">
                                                     <h3>
@@ -43,7 +43,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="{{ asset('idcare/images/facility/1.jpg') }}" alt=""
+                                    <img src="{{ asset('idcare/images/facility/1.jpg') }}" alt="idCARE.UI"
                                         class="card-img-top rounded-0">
                                     <div class="card-body">
                                         <div class="card-text">
@@ -67,7 +67,7 @@
                                     <div class="card-header" style="background-color: #e5c80d;">
                                         <div class="d-flex gap-4 align-items-center">
                                             <img src="{{ asset('idcare/images/card-logo-2.png') }}" height="60"
-                                                width="60" alt="">
+                                                width="60" alt="idCARE.UI">
                                             <div>
                                                 <div class="card-header-title">
                                                     <h3>
@@ -80,7 +80,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="{{ asset('idcare/images/facility/2.jpg') }}" alt=""
+                                    <img src="{{ asset('idcare/images/facility/2.jpg') }}" alt="idCARE.UI"
                                         class="card-img-top rounded-0">
                                     <div class="card-body">
                                         <div class="card-text">{!! Str::limit(strip_tags($subject->content), 285) !!}
@@ -102,7 +102,7 @@
                                     <div class="card-header" style="background-color: #d9bd0a;">
                                         <div class="d-flex gap-4 align-items-center">
                                             <img src="{{ asset('idcare/images/card-logo-3.png') }}" height="60"
-                                                width="60" alt="">
+                                                width="60" alt="idCARE.UI">
                                             <div>
                                                 <div class="card-header-title">
                                                     <h3>
@@ -115,7 +115,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="{{ asset('idcare/images/facility/3.jpg') }}" alt=""
+                                    <img src="{{ asset('idcare/images/facility/3.jpg') }}" alt="idCARE.UI"
                                         class="card-img-top rounded-0">
                                     <div class="card-body">
                                         <div class="card-text">{!! Str::limit(strip_tags($camp->content), 345) !!}
@@ -153,7 +153,7 @@
                                     <div class="row">
                                         <div class="col-4"><img
                                                 src="{{ asset('/storage/images/berita/' . $item->thumbnail) }}"
-                                                alt="" class="w-100"> </div>
+                                                alt="idCARE.UI" class="w-100"> </div>
                                         <div class="col-8">
                                             <span class="berita-date fw-medium text-secondary">
                                                 {{ date('d/m/Y', strtotime($item->created_at)) }}

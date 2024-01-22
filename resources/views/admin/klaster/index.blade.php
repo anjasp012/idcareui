@@ -50,7 +50,7 @@
                                                     <td>{{ $no + 1 }}</td>
                                                     <td style="width: 10%"><img
                                                             src="{{ asset('storage/images/klaster/' . $item->photo) }}"
-                                                            alt="" width="100%"></td>
+                                                            alt="idCARE.UI" width="100%"></td>
                                                     <td>{{ $item->name }}</td>
                                                     <td>{{ $item->position }}</td>
                                                     <td>
