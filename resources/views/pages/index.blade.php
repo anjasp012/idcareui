@@ -151,10 +151,10 @@
                             @foreach ($berita as $item)
                                 <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-md-4"><img
+                                        <div class="col-4"><img
                                                 src="{{ asset('/storage/images/berita/' . $item->thumbnail) }}"
                                                 alt="" class="w-100"> </div>
-                                        <div class="col-md-8">
+                                        <div class="col-8">
                                             <span class="berita-date fw-medium text-secondary">
                                                 {{ date('d/m/Y', strtotime($item->created_at)) }}
                                             </span>
