@@ -143,10 +143,10 @@
                     <div class="col-md-4">
                         <h3 class="title-section">Video</h3>
                         <div class="border-section"></div>
-                        <div class="ratio ratio-16x9">
+                        {{-- <div class="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/E48WTSkJwKo?si=mzncZPzphOiK7BbP"
                                 title="YouTube video" allowfullscreen></iframe>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="col-md-8">
                         <h3 class="title-section">Berita & Update</h3>
@@ -162,10 +162,10 @@
                                             <span class="berita-date fw-medium text-secondary">
                                                 {{ date('d/m/Y', strtotime($item->created_at)) }}
                                             </span>
-                                            <h3 class="berita-title">
+                                            <h6 class="berita-title">
                                                 <a class="text-decoration-none text-black"
                                                     href="{{ route('detailBerita', $item->slug) }}">{{ $item->title }}</a>
-                                            </h3>
+                                            </h6>
                                         </div>
                                     </div>
                                 </div>
