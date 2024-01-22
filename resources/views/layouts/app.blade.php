@@ -29,7 +29,7 @@
             /* Membuat navbar tidak terlihat pada awalnya */
         }
     </style>
-
+    <meta name="google-site-verification" content="D1I1hmmO5vCNUj0Arf0mN5gqlNh02pZIZuH_GQYRsns" />
 </head>
 
 <body class="overflow-x-hidden">
