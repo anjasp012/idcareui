@@ -13,7 +13,7 @@ class GuestController extends Controller
     public function index()
     {
         $data = [
-            'berita' => Post::whereCategory('news')->take(4)->get(),
+            'berita' => Post::whereCategory('news')->orderBy('created_at', 'desc')->take(4)->get(),
             'sekilas' => Pages::findOrFail(16),
             'subject' => Pages::findOrFail(6),
             'camp' => Pages::findOrFail(9),
@@ -115,7 +115,7 @@ class GuestController extends Controller
     public function berita()
     {
         $data = [
-            'berita' => Post::where('category', 'news')->whereStatus('publish')->paginate(10),
+            'berita' => Post::where('category', 'news')->orderBy('created_at', 'desc')->whereStatus('publish')->paginate(10),
             'data' => Pages::findOrFail(11),
         ];
         return view('pages.berita', $data);

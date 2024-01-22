@@ -156,7 +156,7 @@
                                                 alt="" class="w-100"> </div>
                                         <div class="col-md-8">
                                             <span class="berita-date fw-medium text-secondary">
-                                                21/12/2023
+                                                {{ date('d/m/Y', strtotime($item->created_at)) }}
                                             </span>
                                             <h5 class="berita-title">
                                                 <a class="text-decoration-none text-black"
