@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\Admin\Pages\KontakController;
+use App\Models\Post;
+use App\Models\Risetlaporan;
 use Illuminate\Support\Facades\Route;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
 
 /*
 |--------------------------------------------------------------------------
@@ -100,4 +104,32 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
 
 Route::group(['prefix' => 'filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
+Route::get('/sitemap', function () {
+    $sitemap = Sitemap::create()
+        ->add(Url::create('/about-us'))
+        ->add(Url::create('/contact_us'));
+
+    $berita = Post::where('category', 'news')->orderBy('created_at', 'desc')->whereStatus('publish')->get();
+    foreach ($berita as $post) {
+        $sitemap->add(Url::create(route('detailBerita', $post->slug)));
+    }
+    $acara = Post::where('category', 'articles')->orderBy('created_at', 'desc')->whereStatus('publish')->get();
+    foreach ($acara as $post) {
+        $sitemap->add(Url::create(route('detailAcara', $post->slug)));
+    }
+    $course = Post::where('category', 'videos')->orderBy('created_at', 'desc')->whereStatus('publish')->get();
+    foreach ($course as $post) {
+        $sitemap->add(Url::create(route('detailOpenCourseware', $post->slug)));
+    }
+    $class = Post::where('category', 'class')->orderBy('created_at', 'desc')->whereStatus('publish')->get();
+    foreach ($class as $post) {
+        $sitemap->add(Url::create(route('detailClass', $post->slug)));
+    }
+    $riset = Risetlaporan::all();
+    foreach ($riset as $post) {
+        $sitemap->add(Url::create(route('detailRiset', $post->slug)));
+    }
+    $sitemap->writeToFile(public_path('sitemap.xml'));
 });
