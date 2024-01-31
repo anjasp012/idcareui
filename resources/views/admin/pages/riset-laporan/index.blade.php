@@ -38,6 +38,7 @@
                                                 <th class="text-center">
                                                     #
                                                 </th>
+                                                <th>Judul</th>
                                                 <th>File</th>
                                                 <th>Category</th>
                                                 <th>Author</th>
@@ -49,6 +50,7 @@
                                             @foreach ($data as $no => $item)
                                                 <tr>
                                                     <td>{{ $no + 1 }}</td>
+                                                    {{ $item->judul }}
                                                     <td><a target="blank"
                                                             href="{{ route('beranda') . '/storage/riset/' . $item->file }}">{{ $item->file }}</a>
                                                     </td>
