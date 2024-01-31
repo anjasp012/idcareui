@@ -84,10 +84,12 @@
                                 <td>{{ $data->penerbit ? $data->penerbit : '-' }}</td>
                             </tr>
                         </table>
-                        <div class="py-4">
-                            <h3 class="text-center fw-bold">PAPER</h3>
-                        </div>
-                        <iframe src="{{ '/storage/riset/' . $data->file }}" width="100%" height="600px"></iframe>
+                        @if ($data->file != null)
+                            <div class="py-4">
+                                <h3 class="text-center fw-bold">PAPER</h3>
+                            </div>
+                            <iframe src="{{ '/storage/riset/' . $data->file }}" width="100%" height="600px"></iframe>
+                        @endif
                         <div class="my-2">
                             <small
                                 class="text-secondary">{{ @$data->penulis }}{{ @$data->judul }}{{ @$data->publikasi }}{{ @$data->volume }}{{ @$data->nomor }}{{ @$data->halaman }}{{ @$data->penerbit }}</small>
