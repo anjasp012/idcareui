@@ -92,7 +92,7 @@
                         @endif
                         <div class="my-2">
                             <small
-                                class="text-secondary">"{{ @$data->penulis }}",{{ @$data->judul }}"{{ @$data->publikasi }}",{{ @$data->volume }}{{ @$data->nomor }}{{ @$data->halaman }}{{ @$data->penerbit }}</small>
+                                class="text-secondary">"{{ @$data->penulis }}",{{ @$data->judul }},"{{ @$data->publikasi }}",{{ @$data->volume }}{{ @$data->nomor }}{{ @$data->halaman }}{{ @$data->penerbit }}</small>
                         </div>
                     </div>
                 </div>
