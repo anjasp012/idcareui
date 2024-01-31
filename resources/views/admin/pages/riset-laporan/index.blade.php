@@ -50,7 +50,7 @@
                                             @foreach ($data as $no => $item)
                                                 <tr>
                                                     <td>{{ $no + 1 }}</td>
-                                                    {{ $item->judul }}
+                                                    <td>{{ $item->judul }}</td>
                                                     <td><a target="blank"
                                                             href="{{ route('beranda') . '/storage/riset/' . $item->file }}">{{ $item->file }}</a>
                                                     </td>
