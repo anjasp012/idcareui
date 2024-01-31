@@ -17,13 +17,13 @@ return new class extends Migration
             $table->string('penulis');
             $table->string('judul');
             $table->string('slug');
-            $table->string('publikasi');
-            $table->string('volume');
-            $table->string('nomor');
-            $table->string('halaman');
-            $table->string('tahun');
+            $table->string('publikasi')->nullable();
+            $table->string('volume')->nullable();
+            $table->string('nomor')->nullable();
+            $table->string('halaman')->nullable();
+            $table->string('tahun')->nullable();
             $table->string('penerbit')->nullable();
-            $table->string('file');
+            $table->string('file')->nullable();
             $table->timestamps();
         });
     }

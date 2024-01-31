@@ -45,20 +45,22 @@ class RisetLaporanController extends Controller
         $inputValues = $request->validate([
             'penulis' => 'required',
             'judul' => 'required',
-            'publikasi' => 'required',
-            'volume' => 'required',
-            'nomor' => 'required',
-            'halaman' => 'required',
-            'tahun' => 'required',
+            'publikasi' => 'nullable',
+            'volume' => 'nullable',
+            'nomor' => 'nullable',
+            'halaman' => 'nullable',
+            'tahun' => 'nullable',
             'penerbit' => 'nullable',
-            'file' => 'required|mimes:pdf',
+            'file' => 'nullable|mimes:pdf',
         ]);
 
         // dd($request->file('file')->get);
 
-        $file = $request->file('file')->getClientOriginalName();
-        $request->file('file')->storeAs('public/riset/', $file);
-        $inputValues['file'] = $file;
+        if ($request->hasFile('file')) {
+            $file = $request->file('file')->getClientOriginalName();
+            $request->file('file')->storeAs('public/riset/', $file);
+            $inputValues['file'] = $file;
+        }
         $inputValues['slug'] = Str::slug($request->judul);
 
 
@@ -102,9 +104,10 @@ class RisetLaporanController extends Controller
         ]);
 
         if ($request->hasFile('file')) {
-            $foto = $request->file('file');
-            $request->file('thumbnail')->storeAs('public/riset/', $foto);
-            $inputValues['file'] = $foto;
+            Storage::delete('public/riset/' . $riset->file);
+            $file = $request->file('file')->getClientOriginalName();
+            $request->file('file')->storeAs('public/riset/', $file);
+            $inputValues['file'] = $file;
         }
 
 
