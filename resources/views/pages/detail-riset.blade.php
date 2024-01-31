@@ -53,35 +53,35 @@
                             </tr>
                             <tr>
                                 <th>Penulis</th>
-                                <td>{{ $data->penulis }}</td>
+                                <td>{{ $data->penulis ? $data->penulis : '-' }}</td>
                             </tr>
                             <tr>
                                 <th>Judul</th>
-                                <td>{{ $data->judul }}</td>
+                                <td>{{ $data->judul ? $data->judul : '-' }}</td>
                             </tr>
                             <tr>
                                 <th>Publikasi</th>
-                                <td>{{ $data->publikasi }}</td>
+                                <td>{{ $data->publikasi ? $data->publikasi : '-' }}</td>
                             </tr>
                             <tr>
                                 <th>volume</th>
-                                <td>{{ $data->volume }}</td>
+                                <td>{{ $data->volume ? $data->volume : '-' }}</td>
                             </tr>
                             <tr>
                                 <th>nomor</th>
-                                <td>{{ $data->nomor }}</td>
+                                <td>{{ $data->nomor ? $data->nomor : '-' }}</td>
                             </tr>
                             <tr>
                                 <th>halaman</th>
-                                <td>{{ $data->halaman }}</td>
+                                <td>{{ $data->halaman ? $data->halaman : '-' }}</td>
                             </tr>
                             <tr>
                                 <th>tahun</th>
-                                <td>{{ $data->tahun }}</td>
+                                <td>{{ $data->tahun ? $data->tahun : '-' }}</td>
                             </tr>
                             <tr>
                                 <th>penerbit</th>
-                                <td>{{ $data->penerbit }}</td>
+                                <td>{{ $data->penerbit ? $data->penerbit : '-' }}</td>
                             </tr>
                         </table>
                         <div class="py-4">
