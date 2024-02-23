@@ -44,7 +44,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        @if ($item->thumbnail)
+                        @if ($data->thumbnail)
                             <div class="mb-4">
                                 <img src="{{ asset('storage/images/berita/' . $data->thumbnail) }}" class="w-100"
                                     alt="idCARE.UI">
