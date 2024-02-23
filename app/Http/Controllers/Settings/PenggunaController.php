@@ -72,7 +72,7 @@ class PenggunaController extends Controller
     {
         $user = User::findOrFail($id);
         $user->update([
-            'email_verified_at' => now(),
+            'email_verified_at' => date(now()),
         ]);
         return back();
     }
