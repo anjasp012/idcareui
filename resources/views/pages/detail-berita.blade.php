@@ -44,10 +44,12 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <div class="mb-4">
-                            <img src="{{ asset('storage/images/berita/' . $data->thumbnail) }}" class="w-100"
-                                alt="idCARE.UI">
-                        </div>
+                        @if ($item->thumbnail)
+                            <div class="mb-4">
+                                <img src="{{ asset('storage/images/berita/' . $data->thumbnail) }}" class="w-100"
+                                    alt="idCARE.UI">
+                            </div>
+                        @endif
                         <div class="ckeditor">
                             {!! $data->body !!}
                         </div>

@@ -33,12 +33,14 @@
                     <div class="col-md-8">
                         @foreach ($berita as $item)
                             <div class="berita-wrapper">
-                                <div class="berita-image-wrapper">
-                                    <a href="{{ route('detailBerita', $item->slug) }}">
-                                        <img src="{{ asset('storage/images/berita/' . $item->thumbnail) }}" class="w-100"
-                                            alt="idCARE.UI">
-                                    </a>
-                                </div>
+                                @if ($item->thumbnail)
+                                    <div class="berita-image-wrapper">
+                                        <a href="{{ route('detailBerita', $item->slug) }}">
+                                            <img src="{{ asset('storage/images/berita/' . $item->thumbnail) }}"
+                                                class="w-100" alt="idCARE.UI">
+                                        </a>
+                                    </div>
+                                @endif
                                 <div class="berita-head">
                                     <span class="berita-date">
                                         <a href="#">{{ date('d/m/Y', strtotime($item->created_at)) }}</a>

@@ -155,9 +155,12 @@
                             @foreach ($berita as $item)
                                 <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-4"><img
-                                                src="{{ asset('/storage/images/berita/' . $item->thumbnail) }}"
-                                                alt="idCARE.UI" class="w-100"> </div>
+                                        <div class="col-4">
+                                            @if ($item->thumbnail)
+                                                <img src="{{ asset('/storage/images/berita/' . $item->thumbnail) }}"
+                                                    alt="idCARE.UI" class="w-100">
+                                            @endif
+                                        </div>
                                         <div class="col-8">
                                             <span class="berita-date fw-medium text-secondary">
                                                 {{ date('d/m/Y', strtotime($item->created_at)) }}
