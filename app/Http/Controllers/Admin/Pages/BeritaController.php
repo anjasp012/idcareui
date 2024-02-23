@@ -43,13 +43,15 @@ class BeritaController extends Controller
         $inputValues = $request->validate([
             'title' => 'required',
             'body' => 'required',
-            'thumbnail' => 'required',
+            // 'thumbnail' => 'required',
             'status' => 'required',
         ]);
 
-        $foto = "berita-" . Str::random(10) . '.' . $request->file('thumbnail')->extension();
-        $request->file('thumbnail')->storeAs('public/images/berita/', $foto);
-        $inputValues['thumbnail'] = $foto;
+        if ($request->hasFile('thumbnail')) {
+            $foto = "berita-" . Str::random(10) . '.' . $request->file('thumbnail')->extension();
+            $request->file('thumbnail')->storeAs('public/images/berita/', $foto);
+            $inputValues['thumbnail'] = $foto;
+        }
         $inputValues['slug'] = Str::slug($request->title);
         $inputValues['category'] = 'news';
 
