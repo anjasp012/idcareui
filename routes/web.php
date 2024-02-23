@@ -50,6 +50,10 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::get('/', App\Http\Controllers\Admin\DashboardController::class)->name('dashboard');
     Route::resource('klaster', App\Http\Controllers\Admin\KlasterController::class);
     Route::resource('class', App\Http\Controllers\Admin\ClassController::class);
+    Route::prefix('settings')->name('settings.')->group(function () {
+        Route::resource('pengguna', App\Http\Controllers\Settings\PenggunaController::class);
+        Route::get('pengguna/{user}/verify', [App\Http\Controllers\Settings\PenggunaController::class, 'verify'])->name('pengguna.verify');
+    });
     Route::prefix('pages')->name('pages.')->group(function () {
         Route::resource('acara', App\Http\Controllers\Admin\Pages\AcaraController::class);
         Route::resource('berita', App\Http\Controllers\Admin\Pages\BeritaController::class);

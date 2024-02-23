@@ -70,6 +70,10 @@
             <li class="{{ request()->routeIs('admin.class.index') ? 'active' : '' }}"><a class="nav-link"
                     href="{{ route('admin.class.index') }}"><i class="fas fa-pencil-ruler"></i>
                     <span>Kelas</span></a></li>
+            <li class="menu-header">Settings</li>
+            <li class="{{ request()->routeIs('admin.settings.pengguna.index') ? 'active' : '' }}"><a class="nav-link"
+                    href="{{ route('admin.settings.pengguna.index') }}"><i class="fas fa-users"></i>
+                    <span>Pengguna</span></a></li>
         </ul>
     </aside>
 </div>
