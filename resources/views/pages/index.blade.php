@@ -75,7 +75,7 @@
                                             <div>
                                                 <div class="card-header-title">
                                                     <h3>
-                                                        Subjek Pelatihan
+                                                        Subjek dan Silabus Pelatihan
                                                     </h3>
                                                 </div>
                                                 <div class="card-header-implicit">
