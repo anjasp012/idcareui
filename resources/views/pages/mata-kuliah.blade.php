@@ -45,6 +45,5 @@
 @push('script')
     <script>
         $('.ckeditor table').addClass('table table-bordered table-striped');
-        $('.ckeditor table a').addClass('btn btn-primary')
     </script>
 @endpush
