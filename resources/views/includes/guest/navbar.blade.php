@@ -34,7 +34,7 @@
                             <li><a class="dropdown-item" href="{{ route('pendahuluan') }}">Pendahuluan</a></li>
                             <li><a class="dropdown-item"href="{{ route('sambutan_pimpinan') }}">Sambutan Pimpinan</a>
                             </li>
-                            <li><a class="dropdown-item" href="{{ route('klaster') }}">klaster</a></li>
+                            <li><a class="dropdown-item" href="{{ route('klaster') }}">Cluster Leader</a></li>
                             <li><a class="dropdown-item" href="{{ route('message_from_jica') }}">JICA sebagai
                                     Partner</a></li>
                         </ul>

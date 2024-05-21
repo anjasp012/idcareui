@@ -22,7 +22,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="{{ route('admin.pages.pendahuluan.index') }}">Pendahuluan</a></li>
                     <li><a href="{{ route('admin.pages.sambutan-pimpinan.index') }}">Sambutan Pimpinan</a></li>
-                    <li><a href="{{ route('admin.pages.klaster.index') }}">Klaster</a></li>
+                    <li><a href="{{ route('admin.pages.klaster.index') }}">Cluster Leader</a></li>
                     <li><a href="{{ route('admin.pages.message-from-jica.index') }}">JICA Sebagai Partner</a></li>
                 </ul>
             </li>
